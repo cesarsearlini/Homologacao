@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+        integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+    <link rel="stylesheet" href=".css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Acqio TEF</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Menu</h1>
+        <ul>
+            <li><a href="./index.html">Lista de Transações</a></li>
+            <li><a href="./charge.html">Fazer uma Pagamento</a></li>
+            <li><a href="./reversal.html">Fazer um Cancelamento</a></li>
+        </ul>
+
+        <h1>Executar Pagamento</h1>
+        <div class="mb-3">
+            <input type="radio" class="btn-check" name="cardApplication" id="DEBITO" autocomplete="off">
+            <label class="btn btn-primary" for="DEBITO">Debito</label>
+
+            <input type="radio" class="btn-check" name="cardApplication" id="CREDITO" autocomplete="off" checked>
+            <label class="btn btn-primary" for="CREDITO">Credito</label>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Valor da transação</span>
+            <input type="text" class="form-control mascara" id="value" placeholder="0,00"
+                aria-label="Example text with two button addons" required>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">Quantidade de Parcelas</span>
+            <select class="form-select" aria-label="Default select example" id="installment">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <button class="btn btn-danger btnAbort" type="button">Abortar</button>
+            <button class="btn btn-success" id="btnExecute" type="button">Pagar</button>
+        </div>
+
+        <div class="mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">Status:
+                        <b id="status"></b>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <div id="receipt"></div>
+        </div>
+
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"
+        integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD"
+        crossorigin="anonymous"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/change.js"></script>
+
+</body>
+
+</html>
