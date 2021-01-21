@@ -1,0 +1,9 @@
+# file: ~/.gitignore_global
+.DS_Store
+.idea
+.settings
+.vscode
+.idea
+*.log
+*.iml
+target
